@@ -2,7 +2,7 @@
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using System.Threading;
-//using System.Data.SqlClient; 
+using System.Data.SqlClient; 
 
 namespace MtgApi
 {
@@ -56,11 +56,21 @@ namespace MtgApi
                 }
                 Thread.Sleep(100);
 
-                //var conn = new SqlConnection();
-                //conn.ConnectionString = "Data Source=AUSTIN\SQLEXPRESS;"
-                //    + "Initial Catalog=MagicFinanceDB" +
-                //    "User id=" + 
-                //    ;
+                //var conn = new SqlConnection(@"Data Source=192.168.1.140\SQLExpress,1433;Database=MagicFinanceDB;User Id=mtguser;Password=mtguser@1;");
+                //try
+                //{
+                    
+
+                //    SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.TestTable;", conn);
+                //    conn.Open();
+                //    cmd.ExecuteNonQuery();
+                //    conn.Close();
+                //    Console.WriteLine(cmd);
+                //}
+                //catch (Exception ex)
+                //{
+                //    Console.WriteLine(ex);
+                //}
             }
 
         }
