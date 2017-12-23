@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
+using System.Threading;
 
-namespace TestMtgApi
+namespace MtgApi
 {
     public class MainClass
     {
@@ -17,8 +18,8 @@ namespace TestMtgApi
 
         static async void scryFall(string searchString)
         {
-            string page = "https://api.scryfall.com/cards";
-            //string page = "https://api.scryfall.com/cards/search?order=set&q=%2B%2Be%3A" + searchString;
+            //string page = "https://api.scryfall.com/cards";
+            string page = "https://api.scryfall.com/cards/search?order=set&q=%2B%2Be%3A" + searchString;
             bool more_data = true;
 
             while (more_data)
@@ -48,9 +49,11 @@ namespace TestMtgApi
                         else
                         {
                             more_data = false;
+                            Console.WriteLine("done loading data");
                         }
                     }
                 }
+                Thread.Sleep(100);
             }
 
         }

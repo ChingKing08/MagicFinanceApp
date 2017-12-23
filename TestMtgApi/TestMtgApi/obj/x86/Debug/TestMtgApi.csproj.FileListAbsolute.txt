@@ -6,3 +6,11 @@
 /Users/austinking/Projects/TestMtgApi/TestMtgApi/bin/Debug/Newtonsoft.Json.dll
 /Users/austinking/Projects/TestMtgApi/TestMtgApi/bin/Debug/Newtonsoft.Json.xml
 /Users/austinking/Projects/TestMtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.csprojResolveAssemblyReference.cache
+/Users/austinking/Documents/GitHub/MagicFinanceApp/TestMtgApi/TestMtgApi/bin/Debug/TestMtgApi.exe
+/Users/austinking/Documents/GitHub/MagicFinanceApp/TestMtgApi/TestMtgApi/bin/Debug/TestMtgApi.pdb
+/Users/austinking/Documents/GitHub/MagicFinanceApp/TestMtgApi/TestMtgApi/bin/Debug/Newtonsoft.Json.dll
+/Users/austinking/Documents/GitHub/MagicFinanceApp/TestMtgApi/TestMtgApi/bin/Debug/Newtonsoft.Json.xml
+/Users/austinking/Documents/GitHub/MagicFinanceApp/TestMtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.csprojResolveAssemblyReference.cache
+/Users/austinking/Documents/GitHub/MagicFinanceApp/TestMtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.csproj.CoreCompileInputs.cache
+/Users/austinking/Documents/GitHub/MagicFinanceApp/TestMtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.exe
+/Users/austinking/Documents/GitHub/MagicFinanceApp/TestMtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.pdb
