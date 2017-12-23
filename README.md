@@ -2,8 +2,9 @@
 
 ## Data Object
 *Summary*
-List of Data Objects to be stored. 
 
+List of Data Objects to be stored. 
+  
 
   * **multiverse_id** Universal ID
   * **mtgo_id** Magic the Gathering Online ID (no-foil)
