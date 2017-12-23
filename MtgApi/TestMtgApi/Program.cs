@@ -2,6 +2,7 @@
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using System.Threading;
+//using System.Data.SqlClient; 
 
 namespace MtgApi
 {
@@ -54,6 +55,12 @@ namespace MtgApi
                     }
                 }
                 Thread.Sleep(100);
+
+                //var conn = new SqlConnection();
+                //conn.ConnectionString = "Data Source=AUSTIN\SQLEXPRESS;"
+                //    + "Initial Catalog=MagicFinanceDB" +
+                //    "User id=" + 
+                //    ;
             }
 
         }
