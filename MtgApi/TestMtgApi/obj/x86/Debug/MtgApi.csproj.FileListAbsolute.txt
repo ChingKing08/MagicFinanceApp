@@ -13,3 +13,10 @@
 /Users/austinking/Documents/GitHub/MagicFinanceApp/MtgApi/TestMtgApi/obj/x86/Debug/MtgApi.csproj.CoreCompileInputs.cache
 /Users/austinking/Documents/GitHub/MagicFinanceApp/MtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.exe
 /Users/austinking/Documents/GitHub/MagicFinanceApp/MtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.pdb
+E:\UserFiles\Documents\GitHub\MagicFinanceApp\MtgApi\TestMtgApi\obj\x86\Debug\TestMtgApi.exe
+E:\UserFiles\Documents\GitHub\MagicFinanceApp\MtgApi\TestMtgApi\obj\x86\Debug\TestMtgApi.pdb
+E:\UserFiles\Documents\GitHub\MagicFinanceApp\MtgApi\TestMtgApi\bin\Debug\TestMtgApi.exe
+E:\UserFiles\Documents\GitHub\MagicFinanceApp\MtgApi\TestMtgApi\bin\Debug\TestMtgApi.pdb
+E:\UserFiles\Documents\GitHub\MagicFinanceApp\MtgApi\TestMtgApi\bin\Debug\Newtonsoft.Json.dll
+E:\UserFiles\Documents\GitHub\MagicFinanceApp\MtgApi\TestMtgApi\bin\Debug\System.Data.SqlClient.dll
+E:\UserFiles\Documents\GitHub\MagicFinanceApp\MtgApi\TestMtgApi\bin\Debug\Newtonsoft.Json.xml

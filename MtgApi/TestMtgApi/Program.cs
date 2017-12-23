@@ -56,21 +56,25 @@ namespace MtgApi
                 }
                 Thread.Sleep(100);
 
-                //var conn = new SqlConnection(@"Data Source=192.168.1.140\SQLExpress,1433;Database=MagicFinanceDB;User Id=mtguser;Password=mtguser@1;");
-                //try
-                //{
-                    
+                var conn = new SqlConnection(@"Server=localhost\SQLExpress;Database=MagicFinanceDB;User ID=mtguser;Password=mtguser@1");
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM dbo.TestTable;", conn);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                //    SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.TestTable;", conn);
-                //    conn.Open();
-                //    cmd.ExecuteNonQuery();
-                //    conn.Close();
-                //    Console.WriteLine(cmd);
-                //}
-                //catch (Exception ex)
-                //{
-                //    Console.WriteLine(ex);
-                //}
+                    while (reader.Read())
+                    {
+                        Console.WriteLine("{0}",
+                            reader.GetInt32(0));
+                    }
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
             }
 
         }
