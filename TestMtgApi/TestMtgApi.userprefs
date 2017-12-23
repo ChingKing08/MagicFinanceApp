@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{8693DC9F-6676-42D8-96D3-8E647E5D3FEA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestMtgApi/Program.cs">
+    <Files>
+      <File FileName="TestMtgApi/Program.cs" Line="9" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

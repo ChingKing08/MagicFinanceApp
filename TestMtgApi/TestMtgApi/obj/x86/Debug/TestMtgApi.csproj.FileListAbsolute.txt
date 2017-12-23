@@ -1,0 +1,8 @@
+/Users/austinking/Projects/TestMtgApi/TestMtgApi/bin/Debug/TestMtgApi.exe
+/Users/austinking/Projects/TestMtgApi/TestMtgApi/bin/Debug/TestMtgApi.pdb
+/Users/austinking/Projects/TestMtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.csproj.CoreCompileInputs.cache
+/Users/austinking/Projects/TestMtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.exe
+/Users/austinking/Projects/TestMtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.pdb
+/Users/austinking/Projects/TestMtgApi/TestMtgApi/bin/Debug/Newtonsoft.Json.dll
+/Users/austinking/Projects/TestMtgApi/TestMtgApi/bin/Debug/Newtonsoft.Json.xml
+/Users/austinking/Projects/TestMtgApi/TestMtgApi/obj/x86/Debug/TestMtgApi.csprojResolveAssemblyReference.cache
