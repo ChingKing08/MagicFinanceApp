@@ -2,7 +2,7 @@
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using System.Threading;
-using System.Data.SqlClient; 
+using MySql.Data.MySqlClient;
 
 namespace MtgApi
 {
@@ -56,20 +56,23 @@ namespace MtgApi
                 }
                 Thread.Sleep(100);
 
-                var conn = new SqlConnection(@"Server=localhost\SQLExpress;Database=MagicFinanceDB;User ID=mtguser;Password=mtguser@1");
+                var myConnString = @"server = 192.168.1.140; uid = root; pwd = default; database = magicfinancedb";
+                MySqlConnection connection = new MySqlConnection(myConnString);
+
                 try
                 {
-                    SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM dbo.TestTable;", conn);
-                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM TestTable;", connection);
+                    connection.Open();
                     cmd.ExecuteNonQuery();
-                    SqlDataReader reader = cmd.ExecuteReader();
+                    MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        Console.WriteLine("{0}",
-                            reader.GetInt32(0));
+                        Console.WriteLine("{0}: {1}",
+                            reader.GetInt32(0),
+                            reader.GetValue(1));
                     }
-                    conn.Close();
+                    connection.Close();
                 }
                 catch (Exception ex)
                 {
