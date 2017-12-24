@@ -97,6 +97,25 @@ namespace MtgApi
                                 Console.WriteLine(ex);
                             }
                             connection.Close();
+
+
+                            connection.Open();
+                            try
+                            {
+                                var SqlCommandString = "INSERT INTO CardPrice (`multiverse_id`, `usd`, `price_date`) " +
+                                    "VALUES (@multiverse_id, @usd, @price_date);";
+                                MySqlCommand cmd = new MySqlCommand(SqlCommandString, connection);
+                                cmd.Parameters.AddWithValue("@multiverse_id", multiverse_id);
+                                cmd.Parameters.AddWithValue("@usd", usd);
+                                cmd.Parameters.AddWithValue("@price_date", DateTime.Now);
+                                cmd.ExecuteNonQuery();
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex);
+                            }
+                            connection.Close();
+
                         }
 
                         if (parsed["has_more"].ToString().ToLower() == "true")
