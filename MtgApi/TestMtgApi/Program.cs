@@ -19,7 +19,6 @@ namespace MtgApi
 
         static async void scryFall(string searchString)
         {
-            //string page = "https://api.scryfall.com/cards";
             string page = "https://api.scryfall.com/cards/search?order=set&q=%2B%2Be%3A" + searchString;
             bool more_data = true;
 
@@ -63,58 +62,9 @@ namespace MtgApi
 
                             Console.WriteLine("{2} - {0}: ${1}", name, usd, mana_cost);
 
-                            connection.Open();
-                            try
-                            {
-                                var SqlCommandString = "INSERT INTO Card (`multiverse_id`, `name`, `set`, `set_name`, `usd`, `mtgo_id`, `mtgo_foil_id`, `cmc`, `type_line`, `oracle_text`, `mana_cost`, `legalities`, `reserved`, `reprint`, `collector_number`, `rarity`, `artist`) " +
-                                    "VALUES (@multiverse_id, @name, @set, @set_name, @usd, @mtgo_id, @mtgo_foil_id, @cmc, @type_line, @oracle_text, @mana_cost, @legalities, @reserved, @reprint, @collector_number, @rarity, @artist);";
-                                MySqlCommand cmd = new MySqlCommand(SqlCommandString, connection);
-                                cmd.Parameters.AddWithValue("@multiverse_id", multiverse_id);
-                                cmd.Parameters.AddWithValue("@mtgo_id", mtgo_id);
-                                cmd.Parameters.AddWithValue("@mtgo_foil_id", mtgo_foil_id);
-                                cmd.Parameters.AddWithValue("@name", name);
-                                cmd.Parameters.AddWithValue("@usd", usd);
-                                cmd.Parameters.AddWithValue("@cmc", cmc);
-                                cmd.Parameters.AddWithValue("@set_name", set_name);
-                                cmd.Parameters.AddWithValue("@type_line", type_line);
-                                cmd.Parameters.AddWithValue("@set", set);
-                                cmd.Parameters.AddWithValue("@oracle_text", oracle_text);
-                                cmd.Parameters.AddWithValue("@mana_cost", mana_cost);
-                                //cmd.Parameters.AddWithValue("@power", power);
-                                //cmd.Parameters.AddWithValue("@toughness", toughness);
-                                //cmd.Parameters.AddWithValue("@colors", colors);
-                                //cmd.Parameters.AddWithValue("@color_identity", color_identity);
-                                cmd.Parameters.AddWithValue("@legalities", legalities);
-                                cmd.Parameters.AddWithValue("@reserved", reserved);
-                                cmd.Parameters.AddWithValue("@reprint", reprint);
-                                cmd.Parameters.AddWithValue("@collector_number", collector_number);
-                                cmd.Parameters.AddWithValue("@rarity", rarity);
-                                cmd.Parameters.AddWithValue("@artist", artist);
-                                cmd.ExecuteNonQuery();
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex);
-                            }
-                            connection.Close();
-
-
-                            connection.Open();
-                            try
-                            {
-                                var SqlCommandString = "INSERT INTO CardPrice (`multiverse_id`, `usd`, `price_date`) " +
-                                    "VALUES (@multiverse_id, @usd, @price_date);";
-                                MySqlCommand cmd = new MySqlCommand(SqlCommandString, connection);
-                                cmd.Parameters.AddWithValue("@multiverse_id", multiverse_id);
-                                cmd.Parameters.AddWithValue("@usd", usd);
-                                cmd.Parameters.AddWithValue("@price_date", DateTime.Now);
-                                cmd.ExecuteNonQuery();
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex);
-                            }
-                            connection.Close();
+                            MagicFinanceDbDAL.InsertCardDetails(multiverse_id,mtgo_id,mtgo_foil_id,name,usd,cmc,set_name,type_line,set,
+                                                                oracle_text,mana_cost,legalities,reserved,reprint,collector_number,rarity,artist);
+                            MagicFinanceDbDAL.InsertPriceDetails(multiverse_id,usd);
 
                         }
 
@@ -131,28 +81,6 @@ namespace MtgApi
                 }
                 Thread.Sleep(100);
 
-                //var myConnString = @"server = 192.168.1.140; uid = root; pwd = default; database = magicfinancedb";
-                //MySqlConnection connection = new MySqlConnection(myConnString);
-
-                //try
-                //{
-                //    MySqlCommand cmd = new MySqlCommand("SELECT * FROM TestTable;", connection);
-                //    connection.Open();
-                //    cmd.ExecuteNonQuery();
-                //    MySqlDataReader reader = cmd.ExecuteReader();
-
-                //    while (reader.Read())
-                //    {
-                //        Console.WriteLine("{0}: {1}",
-                //            reader.GetInt32(0),
-                //            reader.GetValue(1));
-                //    }
-                //    connection.Close();
-                //}
-                //catch (Exception ex)
-                //{
-                //    Console.WriteLine(ex);
-                //}
             }
 
         }
