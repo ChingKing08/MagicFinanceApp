@@ -2,6 +2,7 @@
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 namespace MtgApi
@@ -10,11 +11,19 @@ namespace MtgApi
     {
         public static void Main(string[] args)
         {
-            Console.Write("set keycode: ");
-            var searchString = Console.ReadLine();
-            scryFall(searchString);
-            Console.ReadLine();
-            Console.ReadKey();
+            var searchString = "";
+
+            while (searchString != "quit")
+            {
+                Console.Write("enter set keycode or 'quit' to quit: ");
+                searchString = Console.ReadLine();
+                scryFall(searchString);
+                // Need to wait here until the async method above completes.
+
+            }
+
+            //Console.ReadLine();
+            //Console.ReadKey();
         }
 
         static async void scryFall(string searchString)

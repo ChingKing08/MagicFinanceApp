@@ -64,7 +64,7 @@ namespace MtgApi
                 MySqlCommand cmd = new MySqlCommand(SqlCommandString, connection);
                 cmd.Parameters.AddWithValue("@multiverse_id", multiverse_id);
                 cmd.Parameters.AddWithValue("@usd", usd);
-                cmd.Parameters.AddWithValue("@price_date", DateTime.Now);
+                cmd.Parameters.AddWithValue("@price_date", DateTime.Now.ToString("yyy.MM.dd"));
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
