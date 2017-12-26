@@ -17,17 +17,24 @@ namespace MtgApi
             {
                 Console.Write("enter set keycode or 'quit' to quit: ");
                 searchString = Console.ReadLine();
+                if (searchString == "quit")
+                {
+                    return;
+                }
                 scryFall(searchString);
-                // Need to wait here until the async method above completes.
 
+                // Need to wait here until the async method above completes. This is a poor man's implementation of that.
+                Thread.Sleep(10000);
             }
-
-            //Console.ReadLine();
-            //Console.ReadKey();
         }
 
         static async void scryFall(string searchString)
         {
+            //searching aginst just multiverseid can be done as below
+            //https://api.scryfall.com/cards/multiverse/ + "multiverse_id"
+            //all set details is available here, which can be used to traverse all cards for all/specific sets
+            //https://api.scryfall.com/sets
+
             string page = "https://api.scryfall.com/cards/search?order=set&q=%2B%2Be%3A" + searchString;
             bool more_data = true;
 
@@ -42,8 +49,6 @@ namespace MtgApi
                     if (data != null)
                     {
                         JObject parsed = JObject.Parse(data);
-                        var myConnString = @"server = Austin; uid = root; pwd = default; database = magicfinancedb";
-                        MySqlConnection connection = new MySqlConnection(myConnString);
 
                         foreach (var obj in parsed["data"])
                         {

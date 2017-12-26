@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{8693DC9F-6676-42D8-96D3-8E647E5D3FEA}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="TestMtgApi/Program.cs">
     <Files>
-      <File FileName="TestMtgApi/Program.cs" Line="50" Column="54" />
-      <File FileName="TestMtgApi/MagicFinanceDbDAL.cs" Line="1" Column="1" />
+      <File FileName="TestMtgApi/Program.cs" Line="24" Column="14" />
+      <File FileName="TestMtgApi/MagicFinanceDbDAL.cs" Line="13" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
