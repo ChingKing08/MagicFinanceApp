@@ -13,7 +13,7 @@ namespace MtgApi
         {
         }
 
-        public static async void scryFall(string searchString)
+        public static async void GetCardsForSet(string searchString)
         {
             //searching aginst just multiverseid can be done as below
             //https://api.scryfall.com/cards/multiverse/ + "multiverse_id"
@@ -36,15 +36,11 @@ namespace MtgApi
 
                         foreach (var obj in parsed["data"])
                         {
-
                             Card card = JSONParser.ParseCard(obj);
-
                             Console.WriteLine("{2} - {0}: ${1}", card._name, card._usd, card._mana_cost);
-
                             MagicFinanceDbDAL.InsertCardDetails(card._multiverse_id, card._mtgo_id, card._mtgo_foil_id, card._name, card._usd, card._cmc, card._set_name, card._type_line, card._set,
                                                                 card._oracle_text, card._mana_cost, card._legalities, card._reserved, card._reprint, card._collector_number, card._rarity, card._artist);
                             MagicFinanceDbDAL.InsertPriceDetails(card._multiverse_id, card._usd);
-
                         }
 
                         if (parsed["has_more"].ToString().ToLower() == "true")

@@ -23,7 +23,7 @@ namespace MtgApi
                 {
                     return;
                 }
-                ScryFallAPI.scryFall(searchString);
+                ScryFallAPI.GetCardsForSet(searchString);
 
                 // Need to wait here until the async method above completes. This is a poor man's implementation of that.
                 Thread.Sleep(10000);
