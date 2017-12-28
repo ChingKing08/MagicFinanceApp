@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{8693DC9F-6676-42D8-96D3-8E647E5D3FEA}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="TestMtgApi/ScryFallAPI.cs">
     <Files>
-      <File FileName="TestMtgApi/Program.cs" Line="15" Column="43" />
-      <File FileName="TestMtgApi/MagicFinanceDbDAL.cs" Line="34" Column="64" />
-      <File FileName="TestMtgApi/ScryFallAPI.cs" Line="16" Column="48" />
-      <File FileName="TestMtgApi/Card.cs" Line="12" Column="34" />
-      <File FileName="TestMtgApi/Set.cs" Line="8" Column="24" />
-      <File FileName="TestMtgApi/JSONParser.cs" Line="43" Column="33" />
+      <File FileName="TestMtgApi/Program.cs" Line="14" Column="1" />
+      <File FileName="TestMtgApi/MagicFinanceDbDAL.cs" Line="23" Column="17" />
+      <File FileName="TestMtgApi/ScryFallAPI.cs" Line="63" Column="1" />
+      <File FileName="TestMtgApi/JSONParser.cs" Line="25" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/austinking/Documents/GitHub/MagicFinanceApp/MtgApi/TestMtgApi/Program.cs" relfile="TestMtgApi/Program.cs" line="14" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.MtgApi PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

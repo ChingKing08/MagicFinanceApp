@@ -59,13 +59,55 @@ namespace MtgApi
             }
         }
 
-        public static async void GetAllSets()
+        public static async void GetPriceForAllCards()
         {
             //searching aginst just multiverseid can be done as below
             //https://api.scryfall.com/cards/multiverse/ + "multiverse_id"
-            //all set details is available here, which can be used to traverse all cards for all/specific sets
-            //https://api.scryfall.com/sets
 
+            string page = "https://api.scryfall.com/cards";
+            bool more_data = true;
+            //List<Card> cardList;
+
+            while (more_data)
+            {
+                using (HttpClient client = new HttpClient())
+                using (HttpResponseMessage response = await client.GetAsync(page))
+                using (HttpContent content = response.Content)
+                {
+                    string data = await content.ReadAsStringAsync();
+
+                    if (data != null)
+                    {
+                        JObject parsed = JObject.Parse(data);
+
+                        foreach (var obj in parsed["data"])
+                        {
+                            Card card = JSONParser.ParseCard(obj);
+                            if (card._multiverse_id.ToString() != "0")
+                            {
+                                Console.WriteLine(card._name);
+                                MagicFinanceDbDAL.InsertPriceDetails(card._multiverse_id, card._usd);
+                            }
+                        }
+
+                        if (parsed["has_more"].ToString().ToLower() == "true")
+                        {
+                            page = parsed["next_page"].ToString();
+                        }
+                        else
+                        {
+                            more_data = false;
+                            Console.WriteLine("done loading data");
+                        }
+                    }
+                }
+                Thread.Sleep(100);
+
+            }
+        }
+
+        public static async void GetAllSets()
+        {
             string page = "https://api.scryfall.com/sets";
             bool more_data = true;
 
@@ -86,7 +128,8 @@ namespace MtgApi
 
                             Set set = JSONParser.ParseSet(obj);
 
-                            Console.WriteLine("{0} - {1}: Block: {2}", set._code, set._name, set._block);
+                            if (!string.IsNullOrEmpty(set._block))
+                                Console.WriteLine("{0} - {1}: Block: {2}", set._code, set._name, set._block);
 
                         }
 
