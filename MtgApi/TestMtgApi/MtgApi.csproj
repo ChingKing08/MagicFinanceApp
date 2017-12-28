@@ -58,6 +58,7 @@
     <Compile Include="MagicFinanceDbDAL.cs" />
     <Compile Include="ScryFallAPI.cs" />
     <Compile Include="Card.cs" />
+    <Compile Include="JSONParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
