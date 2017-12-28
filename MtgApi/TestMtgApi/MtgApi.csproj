@@ -59,6 +59,7 @@
     <Compile Include="ScryFallAPI.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="JSONParser.cs" />
+    <Compile Include="Set.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

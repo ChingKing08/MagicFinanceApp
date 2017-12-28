@@ -35,8 +35,18 @@ namespace MtgApi
             string rarity = (string)cardData["rarity"];
             string artist = (string)cardData["artist"];
 
-
             return card;
+        }
+
+        public static Set ParseSet(JToken setData)
+        {
+            Set set = new Set();
+
+            set._name = (string)setData["name"];
+            set._block = (string)setData["block"];
+            set._code = (string)setData["code"];
+
+            return set;
         }
     }
 }

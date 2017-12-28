@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{8693DC9F-6676-42D8-96D3-8E647E5D3FEA}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TestMtgApi/JSONParser.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestMtgApi/Set.cs">
     <Files>
-      <File FileName="TestMtgApi/Program.cs" Line="21" Column="52" />
-      <File FileName="TestMtgApi/MagicFinanceDbDAL.cs" Line="27" Column="58" />
-      <File FileName="TestMtgApi/ScryFallAPI.cs" Line="5" Column="1" />
+      <File FileName="TestMtgApi/Program.cs" Line="24" Column="37" />
+      <File FileName="TestMtgApi/MagicFinanceDbDAL.cs" Line="34" Column="64" />
+      <File FileName="TestMtgApi/ScryFallAPI.cs" Line="92" Column="29" />
       <File FileName="TestMtgApi/Card.cs" Line="12" Column="34" />
-      <File FileName="TestMtgApi/JSONParser.cs" Line="2" Column="11" />
+      <File FileName="TestMtgApi/JSONParser.cs" Line="44" Column="13" />
+      <File FileName="TestMtgApi/Set.cs" Line="6" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

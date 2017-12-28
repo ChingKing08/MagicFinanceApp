@@ -10,6 +10,11 @@ namespace MtgApi
         {
             var searchString = "";
 
+            ScryFallAPI.GetAllSets();
+            Thread.Sleep(10000);
+            Console.WriteLine("press enter to get cards for set");
+            Console.ReadKey();
+
             while (searchString != "quit")
             {
                 Console.Write("enter set keycode or 'quit' to quit: ");
