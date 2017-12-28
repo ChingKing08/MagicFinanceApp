@@ -41,28 +41,6 @@ namespace MtgApi
 
                             Card card = JSONParser.ParseCard(obj);
 
-                            //card._name = (string)obj["name"];
-                            //card._usd = (string)obj["usd"];
-                            //card._set = (string)obj["set"];
-                            //card._set_name = (string)obj["set_name"];
-                            //card._multiverse_id = (int)obj["multiverse_ids"][0];
-                            //card._mtgo_id = (int)obj["mtgo_id"];
-                            //card._mtgo_foil_id = (int)obj["mtgo_foil_id"];
-                            //card._cmc = (int)obj["cmc"];
-                            //card._type_line = (string)obj["type_line"];
-                            //card._oracle_text = (string)obj["oracle_text"];
-                            //card._mana_cost = (string)obj["mana_cost"];
-                            ////string power = (string)obj["power"];
-                            ////string toughness = (string)obj["toughness"];
-                            ////string colors = (string)obj["colors"][0];
-                            ////string color_identity = (string)obj["color_identity"][0];
-                            //card._legalities = (string)obj["legalities"]["standard"];
-                            //card._reserved = (bool)obj["reserved"];
-                            //card._reprint = (bool)obj["reprint"];
-                            //int collector_number = (int)obj["collector_number"];
-                            //string rarity = (string)obj["rarity"];
-                            //string artist = (string)obj["artist"];
-
                             Console.WriteLine("{2} - {0}: ${1}", card._name, card._usd, card._mana_cost);
 
                             MagicFinanceDbDAL.InsertCardDetails(card._multiverse_id, card._mtgo_id, card._mtgo_foil_id, card._name, card._usd, card._cmc, card._set_name, card._type_line, card._set,
